@@ -13,21 +13,22 @@
 * #### Installing jack
   * sounding simple sine example
   <u>**example: 02_simpleSine**</u>
-  _simple program meant wto verify if you correctly installed jack and can work with audio output_
-  <u>**example: 03_soundingSineClass**</u>
+  _simple program meant to verify if you correctly installed jack and can work with audio output_
+  
+  * <u>**example: 03_soundingSineClass**</u>
   _example that uses jack and uses a Sine object to generate an audible sinewave - you can use this example for the final assignment as a quickstart_
 
 * #### Non treated / additional examples
   
- #### circular buffer
-  * additional example - circular buffer
-  <u>**example: melody**</u>
-  _containing an example of a very simplified circular buffer, which we did not treat yet!_
+  * #### circular buffer
+    additional example - circular buffer
+    <u>**example: melody**</u>
+    _containing an example of a very simplified circular buffer, which we did not treat yet!_
 
- #### Initialiser list:  
-  * initialiser list
-  <u>**example: initializerList**</u>
-  _Additionally - not discussed during session, the example contains_
+  * #### Initialiser list
+    initialiser list
+    <u>**example: initializerList**</u>
+    _Additionally - not discussed during session, the example contains_
     * _an example of constructor Delegation_
     * _an example of the use of a static variable_
 
