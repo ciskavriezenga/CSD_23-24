@@ -1,0 +1,8 @@
+oscillator: oscillator.o main.o
+	g++ -o oscillator oscillator.o main.o
+
+oscillator.o: oscillator.cpp
+	g++ -c oscillator.cpp
+
+main.o: main.cpp
+	g++ -c main.cpp

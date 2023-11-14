@@ -1,0 +1,8 @@
+oscillator: oscillator.o main.o
+	g++ -o oscillator oscillator.o main.o
+
+.cpp.o:
+	g++ -c $<
+
+clean:
+	rm -f oscillator *.o

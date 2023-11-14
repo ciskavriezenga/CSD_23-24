@@ -1,0 +1,4 @@
+oscillator: oscillator.cpp main.cpp
+	g++ -c oscillator.cpp
+	g++ -c main.cpp
+	g++ -o oscillator oscillator.o main.o
