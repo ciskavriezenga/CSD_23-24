@@ -1,19 +1,3 @@
-
-
-
-
-
-
-Constr
-
-
-
-
-
-
-
-
-
 #include "sine.h"
 #include "math.h"
 
