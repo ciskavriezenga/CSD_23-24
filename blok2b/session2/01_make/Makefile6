@@ -1,0 +1,11 @@
+CXX=g++
+SOURCE=oscillator.o main.o
+
+oscillator: $(SOURCE)
+	$(CXX) -o $@ $(SOURCE)
+
+.cpp.o:
+	$(CXX) -c $<
+
+clean:
+	rm -f oscillator *.o
