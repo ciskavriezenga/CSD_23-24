@@ -11,4 +11,3 @@ $(TARGET): $(SOURCE)
 	$(CXX) -c $(CXXFLAGS) $<
 clean:
 	rm -f $(TARGET) *.o
-w
