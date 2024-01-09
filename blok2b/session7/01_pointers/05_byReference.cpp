@@ -15,7 +15,6 @@ void addByReference(int& x, int y) {
 }
 
 
-
 int main() {
   int a = 8;
   int b = 10;
@@ -31,12 +30,12 @@ int main() {
   //float c = (float)a;
   //addPointer((int*) &c, b);
 
-  int c = a;
+  int c = 7;
   addPointer(&c, b);
   std::cout << "\naddPointer: " << c;
 
   // -------- add function, pass by reference --------
-  int d = a;
+  int d = 6;
   addByReference(d, b);
   std::cout << "\naddByReference: " << d;
 
