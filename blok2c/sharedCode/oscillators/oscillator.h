@@ -7,7 +7,7 @@ public:
   Oscillator(float frequency, float samplerate);
   virtual ~Oscillator();
 
-  void initialize(float samplerate);
+  void prepare(float samplerate);
 
   // generates and returns the next sample
   float genNextSample();

@@ -9,7 +9,7 @@ Oscillator::Oscillator(float frequency, float samplerate) :
 
 Oscillator::~Oscillator() {}
 
-void Oscillator::initialize(float samplerate)
+void Oscillator::prepare(float samplerate)
 {
   this->samplerate = samplerate;
 }
