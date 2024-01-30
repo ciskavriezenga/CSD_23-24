@@ -9,7 +9,7 @@ public:
   Tremolo(float freq, float modDepth);
   ~Tremolo();
 
-  void initialize(float samplerate);
+  void prepare(float samplerate);
   float processFrame(float sample);
 
   // setters and getters

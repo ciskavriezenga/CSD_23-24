@@ -5,10 +5,10 @@ Tremolo::Tremolo(float freq, float modDepth) : freq(freq), modDepth(modDepth)
 
 Tremolo::~Tremolo() {}
 
-void Tremolo::initialize(float samplerate) {
+void Tremolo::prepare(float samplerate) {
   // NOTE: example, keeping things 'simple', hence no validation
   this->samplerate = samplerate;
-  sine.initialize(samplerate);
+  sine.prepare(samplerate);
 }
 
 float Tremolo::processFrame(float sample) {
