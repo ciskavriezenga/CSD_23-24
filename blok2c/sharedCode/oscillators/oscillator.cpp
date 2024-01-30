@@ -15,7 +15,7 @@ void Oscillator::initialize(float samplerate)
 }
 
 // generates and returns the next sample
-float Oscillator::tick() {
+float Oscillator::genNextSample() {
   // NOTE - frequency / SAMPLERATE can be implemented in a more efficient way
   phase += frequency / samplerate;
 

@@ -10,7 +10,7 @@ public:
   void initialize(float samplerate);
 
   // generates and returns the next sample
-  float tick();
+  float genNextSample();
 
   // --- getters and setters ---
   // returns the current sample
