@@ -4,7 +4,7 @@
 void CustomCallback::prepare(int rate) {
     samplerate = (float) rate;
     std::cout << "\nsamplerate: " << samplerate << "\n";
-    sine.initialize(rate);
+    sine.prepare(rate);
 }
 
 void CustomCallback::process(AudioBuffer buffer) {
