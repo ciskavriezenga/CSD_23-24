@@ -73,7 +73,7 @@ AudioToFile::~AudioToFile() {
   delete[] outputChannel;
 }
 
-void AudioToFile::write(CustomCallback& callback) {
+void AudioToFile::write(AudioCallback& callback) {
   // TODO - CODE REVIEW
   // CODE BELOW IS HASTLY CODED ...
 
