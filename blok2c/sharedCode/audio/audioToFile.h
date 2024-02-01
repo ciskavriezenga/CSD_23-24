@@ -1,10 +1,10 @@
+#pragma once
 #include "jack_module.h"
 #include <fstream>
 #include <iostream>
 #include<memory>
 #include <sys/stat.h>
 
-class CustomCallback;
 
 class WriteToFile {
 public:
@@ -30,7 +30,7 @@ public:
   ~AudioToFile();
   // TODO
   // add functionality to write a given range to file
-  void write (CustomCallback& callback);
+  void write (AudioCallback& callback);
 
 private:
 

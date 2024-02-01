@@ -2,7 +2,7 @@ CXX= g++
 CXXFLAGS = -I/usr/local/include -Wall -std=c++1z
 LDFLAGS=-ljack
 # the cpp files from the current project to include
-SRC_PROJECT = callback.cpp tremolo.cpp audioToFile.cpp main.cpp
+SRC_PROJECT = callback.cpp tremolo.cpp main.cpp
 # the directory to the folder with the shared modules
 SHAREDCODE_PATH = ../../../sharedCode/
 # the modules to include
@@ -37,8 +37,8 @@ $(TARGET):$(OBJ)
 	$(CXX) -c $< $(CXXFLAGS) -o $*.o
 
 plot:
-	python3 $(SHAREDCODE_PATH)utilities/plot.py
+	python3 $(SHAREDCODE_PATH)audios/plot.py
 
 clean:
-	rm $(TARGET)
 	rm $(OBJ)
+	rm $(TARGET)

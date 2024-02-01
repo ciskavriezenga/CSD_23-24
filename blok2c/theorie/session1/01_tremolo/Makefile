@@ -37,7 +37,7 @@ $(TARGET):$(OBJ)
 	$(CXX) -c $< $(CXXFLAGS) -o $*.o
 
 plot:
-	python3 $(SHAREDCODE_PATH)utilities/plot.py
+	python3 $(SHAREDCODE_PATH)audio/plot.py
 
 clean:
 	rm $(OBJ)
