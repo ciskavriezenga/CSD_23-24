@@ -8,11 +8,13 @@ void CustomCallback::prepare(int rate) {
 }
 
 void CustomCallback::process(AudioBuffer buffer) {
-  // NOTE: mono
-  for (int i = 0; i < buffer.numFrames; ++i) {
-    // TODO - add Tremelo
-    // pass through
-    // buffer.outputChannels[0][i] = buffer.inputChannels[0][i];
-    buffer.outputChannels[0][i] = sine.genNextSample();
+  auto [inputChannels, outputChannels, numInputChannels, numOutputChannels, numFrames] = buffer;
+
+  for (int channel = 0u; channel < numOutputChannels; channel++) {
+    for (int i = 0u; i < numFrames; i++) {
+      // TODO - add Tremelo
+      buffer.outputChannels[channel][i] = sine.genNextSample();
+    }
   }
+
 }

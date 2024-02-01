@@ -16,12 +16,11 @@ public:
   void setModFreq(float freq);
 
 private:
-  Sine sine;
-  float freq;
-  float modDepth;
-
   // default samplerate
   float samplerate = 44100;
+  float freq;
+  float modDepth;
+  Sine sine;
 
   // hide default constructor
   Tremolo(){}

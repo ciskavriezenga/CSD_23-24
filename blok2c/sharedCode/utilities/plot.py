@@ -2,10 +2,26 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
+import sys
+
+# total arguments
+numArguments = len(sys.argv)
+
+# Arguments passed
+print("\nName of Python script:", sys.argv[0])
+
+path = './output.csv'
+if(numArguments < 2):
+  print("no arguments passed - using default path")
+else:
+  path = sys.argv[1]
+  print("using path" + path)
+
+
 
 # create a list and import data from output.csv file
 data = list()
-with open('./output.csv', 'r') as file:
+with open(path, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         data.append(float(row[0]))

@@ -5,6 +5,9 @@
 FastSine::FastSine(float frequency, float samplerate) :
   Oscillator(frequency, samplerate), tempPhase(0) {}
 
+// use default samplerate
+FastSine::FastSine(float frequency) : FastSine(frequency, 44100) {}
+
 FastSine::~FastSine() {}
 
 //override calculate method

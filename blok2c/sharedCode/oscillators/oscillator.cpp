@@ -1,11 +1,12 @@
 #include "oscillator.h"
 
+Oscillator::Oscillator(float frequency) :
+Oscillator(frequency, 44100) {}
+
 Oscillator::Oscillator(float frequency, float samplerate) :
-  frequency(frequency), amplitude(1.0), phase(0), sample(0),
+  frequency(frequency),  phase(0), sample(0),amplitude(1.0),
   samplerate(samplerate)
-  {
-    // TODO - use setFrequency & question Mila
-  }
+  {}
 
 Oscillator::~Oscillator() {}
 
@@ -24,6 +25,9 @@ float Oscillator::genNextSample() {
 
   // let subclasses calculate the next sample
   calcNextSample();
+
+  // apply amplitude
+  sample *= amplitude;
 
   // return the newly generated sample
   return sample;

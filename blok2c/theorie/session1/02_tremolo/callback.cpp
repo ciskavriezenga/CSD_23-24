@@ -4,16 +4,17 @@
 void CustomCallback::prepare(int rate) {
     samplerate = (float) rate;
     std::cout << "\nsamplerate: " << samplerate << "\n";
+    tremolo.prepare(rate);
     sine.prepare(rate);
 }
 
 void CustomCallback::process(AudioBuffer buffer) {
   auto [inputChannels, outputChannels, numInputChannels, numOutputChannels, numFrames] = buffer;
-
-  // NOTE: mono for the sake of simplicity
-  for (int channel = 0u; channel < 1; ++channel) {
-    for (int sample = 0u; sample < numFrames; ++sample) {
-      outputChannels[channel][sample] = inputChannels[0][sample];
+  float sample;
+  for (int channel = 0u; channel < numInputChannels; channel++) {
+    for (int i = 0u; i < numFrames; i++) {
+      sample = inputChannels[channel][i];
+      outputChannels[channel][i] = tremolo.processFrame(sample);
     }
   }
 }

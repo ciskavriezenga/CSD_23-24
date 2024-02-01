@@ -8,6 +8,7 @@ class FastSine : public Oscillator
 public:
   //Constructor and destructor
   FastSine(float frequency, float samplerate);
+  FastSine(float frequency);
   ~FastSine();
 
 private:

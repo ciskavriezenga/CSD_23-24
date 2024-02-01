@@ -3,8 +3,10 @@
 
 #define SAW_SMOOTH_FACTOR 5.0f
 
-Saw::Saw() : Saw(0, 0)
-{}
+Saw::Saw() : Saw(0, 0) {}
+
+// use default samplerate
+Saw::Saw(float frequency) : Saw(frequency, 44100) {}
 
 Saw::Saw(float frequency, float samplerate) :
   Oscillator(frequency, samplerate),

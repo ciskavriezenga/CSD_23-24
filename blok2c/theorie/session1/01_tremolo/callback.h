@@ -3,7 +3,7 @@
 
 #include "jack_module.h"
 #include "sine.h"
-#include "square.h"
+
 
 class CustomCallback : public AudioCallback {
 public:

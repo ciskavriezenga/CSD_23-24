@@ -5,6 +5,7 @@ class Oscillator
 {
 public:
   Oscillator(float frequency, float samplerate);
+  Oscillator(float frequency);
   virtual ~Oscillator();
 
   void prepare(float samplerate);
@@ -20,11 +21,12 @@ public:
 
 protected:
   virtual void calcNextSample() = 0;
-
   float frequency;
-  float amplitude;
   float phase;
-  // sample contains the current sample
+// sample contains the current sample
   float sample;
-  float samplerate;  
+
+private:
+  float amplitude;
+  float samplerate;
 };
