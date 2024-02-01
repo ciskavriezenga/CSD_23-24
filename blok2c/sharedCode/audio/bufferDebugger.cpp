@@ -1,5 +1,5 @@
 #include "bufferDebugger.h"
-#include "writeToFile.h"
+#include "audioToFile.h"
 
 // logs first n values in the buffer to the console
 void BufferDebugger::logBegin(float* buffer, uint bufSize, uint nFrames)
