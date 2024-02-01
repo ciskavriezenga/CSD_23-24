@@ -40,5 +40,5 @@ plot:
 	python3 $(SHAREDCODE_PATH)utilities/plot.py
 
 clean:
-	rm $(OBJ)
 	rm $(TARGET)
+	rm $(OBJ)

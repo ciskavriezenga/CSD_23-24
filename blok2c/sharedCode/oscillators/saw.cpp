@@ -5,9 +5,6 @@
 
 Saw::Saw() : Saw(0, 0) {}
 
-// use default samplerate
-Saw::Saw(float frequency) : Saw(frequency, 44100) {}
-
 Saw::Saw(float frequency, float samplerate) :
   Oscillator(frequency, samplerate),
   phaseIncrement(frequency / samplerate * SAW_SMOOTH_FACTOR),

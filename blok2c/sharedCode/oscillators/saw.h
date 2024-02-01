@@ -8,8 +8,7 @@ class Saw : public Oscillator
 public:
   //Constructor and destructor
   Saw();
-  Saw(float frequency);
-  Saw(float frequency, float samplerate);
+  Saw(float frequency, float samplerate = 44100);
   ~Saw();
 
 private:

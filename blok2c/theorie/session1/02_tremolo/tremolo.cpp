@@ -1,14 +1,13 @@
 #include "tremolo.h"
 
 Tremolo::Tremolo(float freq, float modDepth) :
-  freq(freq), modDepth(modDepth), sine(freq)
+  modDepth(modDepth), sine(freq)
 {}
 
 Tremolo::~Tremolo() {}
 
 void Tremolo::prepare(float samplerate) {
   // NOTE: example, keeping things 'simple', hence no validation
-  this->samplerate = samplerate;
   sine.prepare(samplerate);
 }
 
@@ -24,6 +23,6 @@ float Tremolo::processFrame(float sample) {
 
 void Tremolo::setModFreq(float freq) {
   // NOTE: example, keeping things 'simple', hence no validation
-  this->freq = freq;
+  sine.setFrequency(freq);
 }
 

@@ -2,7 +2,6 @@
 #define CALLBACK_H
 
 #include "jack_module.h"
-#include "sine.h"
 #include "tremolo.h"
 
 
@@ -14,7 +13,6 @@ public:
 private:
   float samplerate = 44100;
   Tremolo tremolo = Tremolo(6, 1);
-  Sine sine = Sine(10, 44100);
 };
 
 #endif //CALLBACK_H

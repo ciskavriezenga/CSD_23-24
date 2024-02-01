@@ -16,9 +16,6 @@ public:
   void setModFreq(float freq);
 
 private:
-  // default samplerate
-  float samplerate = 44100;
-  float freq;
   float modDepth;
   Sine sine;
 

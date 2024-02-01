@@ -3,9 +3,6 @@
 
 Square::Square() : Square(0, 0) {}
 
-// use default samplerate
-Square::Square(float frequency) : Square(frequency, 44100) {}
-
 Square::Square(float frequency, float samplerate) :
   Oscillator(frequency, samplerate)
 {
