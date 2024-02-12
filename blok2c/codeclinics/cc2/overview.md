@@ -37,7 +37,6 @@ Maak een static Interpolation class met de volgende functies, gebruik hierbij fl
 
 * `mapInRange(value, fromLow, fromHigh, toLow, toHigh)`
   _returns the mapped value from one range to another_
-    * value: value: the value to map
     * fromLow: the lower bound of the value’s current range.
     * fromHigh: the upper bound of the value’s current range.
     * toLow: the lower bound of the value’s target range.
