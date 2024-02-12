@@ -16,20 +16,23 @@
 
 ## Effect base class, delay
 
-* Effect base class
+* Effect base class
   * Which methods and fields can we place in the effect base class?
 
-  * let's use 'pass by references' for the `processFrame`
+    * for the sake of different styles and strategies; let's use 'pass by references' for the `processFrame`, 
 
-        float processFrame(float input);        
-        void processFrame(float* input, float* output);
-        void processFrame(float& input, float& output);
+          float processFrame(float input);        
+          void processFrame(float* input, float* output);
+          void processFrame(float& input, float& output);
+  * question: 
+    *  size a floating point 4 bytes
+    * _"If the system is 16-bit, size of void pointer is 2 bytes. 
+    If the system is 32-bit, size of void pointer is 4 bytes. If the system is 64-bit, size of void pointer is 8 bytes."_
+    https://www.tutorialspoint.com/what-is-the-size-of-void-pointer-in-c-cplusplus
+      
+    _for more information about references vs pointers, see: https://www.agner.org/optimize/optimizing_cpp.pdf_
 
-
-
-    * see: https://www.agner.org/optimize/optimizing_cpp.pdf
-
-
+* Delay
 
 
 
