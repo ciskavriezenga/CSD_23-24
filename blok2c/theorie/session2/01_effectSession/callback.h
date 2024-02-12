@@ -2,7 +2,7 @@
 #define CALLBACK_H
 
 #include "jack_module.h"
-#include "sine.h"
+#include "tremolo.h"
 
 
 class CustomCallback : public AudioCallback {
@@ -12,8 +12,9 @@ public:
 
 private:
   float samplerate = 44100;
-  // TODO - add Tremelo
-  Sine sine = Sine(220, 44100);
+  Tremolo tremolo = Tremolo(6, 1);
+  // TODO - implement Delay
+
 };
 
 #endif //CALLBACK_H

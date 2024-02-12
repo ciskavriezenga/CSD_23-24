@@ -3,6 +3,7 @@
 #include "jack_module.h"
 #include "math.h"
 #include "callback.h"
+#include "audioToFile.h"
 
 
 
@@ -25,8 +26,7 @@ int main(int argc, char **argv) {
   AudioToFile audioToFile;
   audioToFile.write(callback);
 #else
-
-  jackModule.init(0, 1);
+  jackModule.init(1, 1);
 
   bool running = true;
   while (running) {

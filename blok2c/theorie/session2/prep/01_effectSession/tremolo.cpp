@@ -13,7 +13,7 @@ void Tremolo::prepare(float samplerate) {
 
 float Tremolo::processFrame(float sample) {
   // transform sine in range [-1, 1] to range [0, 1]
-  float modSignal = sine.genNextSample() * 0.5 + 0.5;
+  float modSignal = sine.genNextSample();
   // apply modDept
   modSignal *= modDepth;
   modSignal += 1.0 - modDepth;
