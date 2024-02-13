@@ -6,7 +6,7 @@ SRC_PROJECT = main.cpp
 # the directory to the folder with the shared modules
 SHAREDCODE_PATH = ../../../sharedCode/
 # the modules to include
-MODULES = oscillators utilities
+MODULES = oscillators audio
 
 
 # append shared code path prefix to modules
