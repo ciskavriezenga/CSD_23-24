@@ -7,3 +7,9 @@ Effect::Effect(float dryWet) {
 }
 
 Effect::~Effect() {}
+
+
+float Effect::processFrame(float input) {
+  return applyEffect(input);
+}
+
