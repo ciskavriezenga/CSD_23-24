@@ -11,9 +11,12 @@ public:
   Effect(float dryWet = 1.0);
   virtual ~Effect();
   float processFrame(float input);
+  void setDryWet(float dryWet);
+
 protected:
   // abstract method
   virtual float applyEffect(float input) = 0;
 private:
-  //hide default constructor
+  float dry;
+  float wet;
 };
