@@ -38,7 +38,9 @@
 
 ## Opdrachten komende 3 weken - overzicht
 week 1. Effect (base class), Delay, Tremolo classes
+
 week 2. WaveShaper, presentatie voorbereiden - *presentatie theorie sessie week 3*
+
 week 3. StereoChorus - *aftekenen practicum week 4*
 
 ## Opdracht - week 2
