@@ -35,6 +35,7 @@ public:
 
   /*
    * returns the mapped value from one range to another
+   * value: a value (in the 'from' range, but not necessarily)
    * fromLow: the lower bound of the value’s current range.
    * fromHigh: the upper bound of the value’s current range.
    * toLow: the lower bound of the value’s target range.

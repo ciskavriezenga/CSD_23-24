@@ -43,7 +43,17 @@ week 2. WaveShaper, presentatie voorbereiden - *presentatie theorie sessie week 
 
 week 3. StereoChorus - *aftekenen practicum week 4*
 
+
 ## Opdracht - week 2
+
+STAPPENPLAN: 
+1. start met de code uit theorie/session2/02_effect (prima  om die tremolo en delay te gebruiken)
+2. voeg een header en cpp toe met subclass WaveShaper
+3. Implementeer de basis functionaliteit (blanco shell --> returned de input sample)
+4. pak de functie van de slides met de arctan en de k (gebruik math.h voor arctan functie)
+5.... eerst lekker spelen! --> ga door met de demo apllicatie, zie hieronder
+6. (pas dan werken met een wavetabel (buffer) + interpolatie
+
 * Maak een waveshaper
   * maak gebruik van een wavetable
   * zie Pirkle page 497 voor een sigmoid functie
