@@ -13,6 +13,7 @@ Delay::Delay(float feedback, uint numDelaySamples,
   setFeedback(feedback);
   setNumDelaySamples(numDelaySamples);
   // allocate buffer and set all samples to 0
+
   m_buffer = (float*)malloc(maxDelaySize * sizeof(float));
   memset(m_buffer, 0, m_size * sizeof(float));
 }
