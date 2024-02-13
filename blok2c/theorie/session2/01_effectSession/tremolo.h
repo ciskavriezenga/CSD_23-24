@@ -10,7 +10,7 @@ public:
   Tremolo(float freq = 1.0f, float modDepth = 1.0f, float dryWet = 1.0f);
   ~Tremolo();
 
-  void prepare(float samplerate);
+  void prepare(float samplerate) override;
 
   // setters and getters
   void setModFreq(float freq);
