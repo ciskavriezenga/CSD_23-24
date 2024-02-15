@@ -6,6 +6,12 @@
 class Tremolo
 {
 public:
-  Tremolo();
+  Tremolo(float freq, float modDepth);
   ~Tremolo();
+  float processFrame(float input);
+  void prepare(float sampleRate);
+
+private:
+  Sine lfo;
+  float modDepth;
 };

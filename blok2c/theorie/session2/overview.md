@@ -16,29 +16,44 @@
 
 ## Effect base class, delay
 
-* Effect base class
+* Effect base class
   * Which methods and fields can we place in the effect base class?
 
-  * let's use 'pass by references' for the `processFrame`
+    * for the sake of different styles and strategies; let's use 'pass by references' for the `processFrame`, 
 
-        float processFrame(float input);        
-        void processFrame(float* input, float* output);
-        void processFrame(float& input, float& output);
+          float processFrame(float input);        
+          void processFrame(float* input, float* output);
+          void processFrame(float& input, float& output);
+  * question: 
+    *  size a floating point 4 bytes
+    * _"If the system is 16-bit, size of void pointer is 2 bytes. 
+    If the system is 32-bit, size of void pointer is 4 bytes. If the system is 64-bit, size of void pointer is 8 bytes."_
+    https://www.tutorialspoint.com/what-is-the-size-of-void-pointer-in-c-cplusplus
+      
+    _for more information about references vs pointers, see: https://www.agner.org/optimize/optimizing_cpp.pdf_
 
-
-
-    * see: https://www.agner.org/optimize/optimizing_cpp.pdf
-
-
+* Delay
 
 
 
 ## Opdrachten komende 3 weken - overzicht
 week 1. Effect (base class), Delay, Tremolo classes
+
 week 2. WaveShaper, presentatie voorbereiden - *presentatie theorie sessie week 3*
+
 week 3. StereoChorus - *aftekenen practicum week 4*
 
+
 ## Opdracht - week 2
+
+STAPPENPLAN: 
+1. start met de code uit theorie/session2/02_effect (prima  om die tremolo en delay te gebruiken)
+2. voeg een header en cpp toe met subclass WaveShaper
+3. Implementeer de basis functionaliteit (blanco shell --> returned de input sample)
+4. pak de functie van de slides met de arctan en de k (gebruik math.h voor arctan functie)
+5.... eerst lekker spelen! --> ga door met de demo apllicatie, zie hieronder
+6. (pas dan werken met een wavetabel (buffer) + interpolatie
+
 * Maak een waveshaper
   * maak gebruik van een wavetable
   * zie Pirkle page 497 voor een sigmoid functie

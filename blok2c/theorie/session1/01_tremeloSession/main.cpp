@@ -13,7 +13,7 @@
  * jackd -d coreaudio
  */
 
-#define WRITE_TO_FILE 1
+#define WRITE_TO_FILE 0
 
 
 int main(int argc, char **argv) {
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   audioToFile.write(callback);
 #else
 
-  jackModule.init(0, 1);
+  jackModule.init(1, 1);
 
   bool running = true;
   while (running) {
