@@ -1,5 +1,5 @@
 #include <iostream>
-#include "writeToFile.h"
+#include "audioToFile.h"
 
 #define BUFFER_SIZE 10
 

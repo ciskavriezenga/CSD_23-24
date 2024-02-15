@@ -11,7 +11,7 @@ public:
     SINE = 0, // ensure enum starts at 0
     SAW,
     SQUARE,
-    SIZE // 3
+    SIZE // 4
   };
   static void generateWaveform(float* buffer, int numFrames,
     WaveformType waveformType);

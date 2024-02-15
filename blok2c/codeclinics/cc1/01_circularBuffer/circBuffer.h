@@ -57,7 +57,7 @@ private:
   void releaseBuffer();
 
   // pointer to the buffer
-	float* m_buffer;\
+	float* m_buffer;
   // buffer size
 	uint m_size;
 	// read and write heads, delay size

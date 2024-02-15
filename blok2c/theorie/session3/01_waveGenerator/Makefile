@@ -2,11 +2,11 @@ CXX= g++
 CXXFLAGS = -I/usr/local/include -Wall -std=c++1z
 LDFLAGS=-ljack
 # the cpp files from the current project to include
-SRC_PROJECT = main.cpp
+SRC_PROJECT = wavetableGenerator.cpp main.cpp
 # the directory to the folder with the shared modules
 SHAREDCODE_PATH = ../../../sharedCode/
 # the modules to include
-MODULES = oscillators utilities
+MODULES = oscillators audio
 
 
 # append shared code path prefix to modules
@@ -37,7 +37,7 @@ $(TARGET):$(OBJ)
 	$(CXX) -c $< $(CXXFLAGS) -o $*.o
 
 plot:
-	python3 $(SHAREDCODE_PATH)utilities/plot.py
+	python3 $(SHAREDCODE_PATH)audio/plot.py
 
 clean:
 	rm $(TARGET)

@@ -2,12 +2,12 @@ CXX= g++
 CXXFLAGS = -I/usr/local/include -Wall -std=c++1z
 LDFLAGS=-ljack
 # the cpp files from the current project to include
-SRC_PROJECT = callback.cpp delay.cpp tremolo.cpp effect.cpp main.cpp
+SRC_PROJECT = main.cpp
 # the directory to the folder with the shared modules
 SHAREDCODE_PATH = ../../../sharedCode/
 # the modules to include
 MODULES = oscillators audio
-TARGET = example
+
 
 # append shared code path prefix to modules
 MODULE_PATHS = $(addprefix $(SHAREDCODE_PATH),$(MODULES))
@@ -19,7 +19,6 @@ include $(MODULE_MK)
 # create src list for all .cpp files
 SRC = $(addprefix $(SHAREDCODE_PATH),$(SRC_MODULES))
 SRC+= $(SRC_PROJECT)
-
 # look for include files in
 # each of the modules
 CXXFLAGS += $(patsubst %,-I%,./$(MODULE_PATHS))
@@ -28,6 +27,7 @@ OBJ := $(patsubst %.cpp,%.o, $(filter %.cpp,$(SRC)))
 # log OBJ
 $(info $$OBJ is [${OBJ}])
 
+TARGET=example
 # link the program
 $(TARGET):$(OBJ)
 	$(CXX) -o $@ $(OBJ) $(LDFLAGS)
@@ -37,8 +37,8 @@ $(TARGET):$(OBJ)
 	$(CXX) -c $< $(CXXFLAGS) -o $*.o
 
 plot:
-	python3 $(SHAREDCODE_PATH)audio/plot.py
+	python3 $(SHAREDCODE_PATH)utilities/plot.py
 
 clean:
-	rm $(OBJ)
 	rm $(TARGET)
+	rm $(OBJ)

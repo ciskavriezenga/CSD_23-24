@@ -2,7 +2,7 @@
 #define CALLBACK_H
 
 #include "jack_module.h"
-#include "tremolo.h"
+#include "waveShaper.h"
 
 
 class CustomCallback : public AudioCallback {
@@ -12,7 +12,7 @@ public:
 
 private:
   float samplerate = 44100;
-  Tremolo tremolow = Tremolo(6, 1);
+  // TODO - add waveshaper
 };
 
 #endif //CALLBACK_H

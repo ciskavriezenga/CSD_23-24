@@ -34,11 +34,11 @@ die horen enkel beheerd te worden door die class en nier daarbuiten
 Wanneer het om debug code gaat kun je hiervoor werken met een preprocessor if en macro
 
 
-- Voert een methode in een subclass een aantal dezelfde stappen uit? 
+- Voer een methode in een subclass een aantal dezelfde stappen uit? 
 Verplaats dit naar de base class
 
 
-- Houdt private wat private kan, dus niet alles in de base class op protected zetten
+- Houd private wat private kan, dus niet alles in de base class op protected zetten
 
 
 - Setters --> valideer de input. Bijv. 0 < frequentie < niquist freq.
@@ -54,7 +54,7 @@ en wanneer je zoiets gebruikt dan enkel als je static door en door begrijpt
 
 
 
-- Schrijf in je comments niet wat er in de regel eronder gebeurd, maar vat meerdere regels samen, of 
+- Schrijf in je comments niet wat er in de regel eronder gebeurt, maar vat meerdere regels samen, of 
 leg uit waarom je iets zo aanpakt. 
 Voorbeeld waarbij een comment niet iets toevoegt: 
     ```

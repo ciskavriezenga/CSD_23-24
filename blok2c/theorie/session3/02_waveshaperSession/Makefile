@@ -2,11 +2,11 @@ CXX= g++
 CXXFLAGS = -I/usr/local/include -Wall -std=c++1z
 LDFLAGS=-ljack
 # the cpp files from the current project to include
-SRC_PROJECT = wavetableGenerator.cpp main.cpp
+SRC_PROJECT = wavetableGenerator.cpp callback.cpp waveShaper.cpp effect.cpp main.cpp
 # the directory to the folder with the shared modules
 SHAREDCODE_PATH = ../../../sharedCode/
 # the modules to include
-MODULES = oscillators utilities
+MODULES = oscillators audio
 
 
 # append shared code path prefix to modules

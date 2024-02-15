@@ -5,6 +5,8 @@
 #include "callback.h"
 #include "audioToFile.h"
 
+
+
 /*
  * NOTE: jack2 needs to be installed
  * jackd invokes the JACK audio server daemon
@@ -24,7 +26,6 @@ int main(int argc, char **argv) {
   AudioToFile audioToFile;
   audioToFile.write(callback);
 #else
-
   jackModule.init(1, 1);
 
   bool running = true;
