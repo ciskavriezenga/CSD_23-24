@@ -1,4 +1,4 @@
-// exammple from: https://coffeebeforearch.github.io/2020/08/04/atomic-vs-mutex.html
+// example based on code examples from: https://coffeebeforearch.github.io/2020/08/04/atomic-vs-mutex.html
 #include <iostream>
 #include <thread>
 #include <atomic>
