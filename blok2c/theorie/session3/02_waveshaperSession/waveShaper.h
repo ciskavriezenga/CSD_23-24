@@ -12,13 +12,6 @@ public:
   // applies tremolo effect to the input frame
   float applyEffect(const float input) override;
 
-  inline double mapInRange (double factor, double xLow, double xHigh, double yLow, double yHigh)  {
-    return (yLow * (xHigh - factor) + yHigh * (factor - xLow)) / (xHigh - xLow);
-  }
-  inline double linearMap (double factor, double low, double high)  {
-    return mapInRange (factor, 0, 1, low, high);
-  }
-
 private:
   // hide default constructor
   WaveShaper();

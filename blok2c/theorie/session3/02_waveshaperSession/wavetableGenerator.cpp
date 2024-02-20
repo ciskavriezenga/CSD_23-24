@@ -62,9 +62,9 @@ void WavetableGenerator::generateSCurve(float* buffer, int bufSize, float k)
 float WavetableGenerator::map(const float value, float fromLow, float fromHigh, float toLow,
  float toHigh)
 {
-  // TODO - validate input, can'nt be negative --=> use unsigned float
+  float deltaFromLow = value - fromLow;
   float deltaFrom = fromHigh - fromLow;
-  float normValue = value / deltaFrom;
+  float normValue = deltaFromLow / deltaFrom;
   return mapLin(normValue, toLow, toHigh);
 }
 
