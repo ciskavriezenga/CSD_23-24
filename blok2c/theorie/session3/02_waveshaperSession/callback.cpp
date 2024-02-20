@@ -12,8 +12,7 @@ void CustomCallback::process(AudioBuffer buffer) {
 
   for (int channel = 0u; channel < numInputChannels; channel++) {
     for (int i = 0u; i < numFrames; i++) {
-      // TODO - implement waveShaper
-      outputChannels[channel][i] = 0;
+      outputChannels[channel][i] = waveShaper.processFrame(inputChannels[channel][i]);
     }
   }
 }

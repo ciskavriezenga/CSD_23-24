@@ -12,7 +12,7 @@ public:
 
 private:
   float samplerate = 44100;
-  // TODO - add waveshaper
+  WaveShaper waveShaper = WaveShaper(1.0);
 };
 
 #endif //CALLBACK_H
