@@ -23,8 +23,8 @@ float Delay::applyEffect(float sample) {
 }
 
 void Delay::wrapH(int &head) {
-  if(head >= maxDelaySamples) {
-    head -= maxDelaySamples;
+  if(head >= BUFFER_SIZE) {
+    head -= BUFFER_SIZE;
   }
 }
 
