@@ -3,7 +3,7 @@
 #include <thread>
 #include <atomic>
 
-#define SELECT_EXAMPLE 3
+#define SELECT_EXAMPLE 2
 // 1 - issue with synchronisation
 // 2 - atomic
 // 3 - mutex
@@ -17,13 +17,12 @@ int main() {
 
 
 #elif SELECT_EXAMPLE == 2
-  // Shared value for our threads
+   // Shared value for our threads
    std::atomic<int> shared_val = 0;
 
 
 #endif
-  // Number of iterations (65536)
-  int N = 1 << 16;
+  int N = 10000;
 
 
 #if SELECT_EXAMPLE == 1 || SELECT_EXAMPLE == 2
@@ -39,10 +38,6 @@ int main() {
 
 
 
-
-
-
-
 #elif SELECT_EXAMPLE == 3
   std::mutex mutex;
   // Function to increment using a lock
@@ -51,6 +46,7 @@ int main() {
     for (int i = 0; i < N; i++) {
       std::lock_guard <std::mutex> guard(mutex);
       shared_val++;
+
     }
   };
 
@@ -60,13 +56,8 @@ int main() {
 #endif
 
 // Join the threads
-t1.
-
-join();
-
-t2.
-
-join();
+t1.join();
+t2.join();
 
 // Print the result
 std::cout << "FINAL VALUE IS: " << shared_val << '\n';

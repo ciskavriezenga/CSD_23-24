@@ -8,7 +8,7 @@ int main() {
   // generate wavetable and fill with sine waveform
   float wavetable[BUFFER_SIZE];
 
-  WavetableGenerator::generateSCurve(wavetable, BUFFER_SIZE, 10.0f);
+  WavetableGenerator::generateSCurve(wavetable, BUFFER_SIZE, 2.0f);
 
   BufferDebugger::writeToFile(wavetable, BUFFER_SIZE, "output.csv");
 
