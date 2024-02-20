@@ -59,11 +59,12 @@ void WavetableGenerator::generateSCurve(float* buffer, int bufSize, float k)
  * TODO: please remove these and use your own map range function from your
  * Interpolation class.
  */
-float WavetableGenerator::map(float value, float fromLow, float fromHigh, float toLow,
+float WavetableGenerator::map(const float value, float fromLow, float fromHigh, float toLow,
  float toHigh)
 {
+  float deltaFromLow = value - fromLow;
   float deltaFrom = fromHigh - fromLow;
-  float normValue = value / deltaFrom;
+  float normValue = deltaFromLow / deltaFrom;
   return mapLin(normValue, toLow, toHigh);
 }
 
