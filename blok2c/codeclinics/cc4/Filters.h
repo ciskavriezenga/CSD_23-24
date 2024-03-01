@@ -3,7 +3,8 @@
 //
 #pragma once
 
-struct Filter {
+class Filter {
+public:
     virtual double process(double input) = 0;
 };
 
@@ -13,7 +14,8 @@ struct Filter {
 //              |                   |
 //             (a)<-----------------
 //
-struct IIRFilter : Filter {
+class IIRFilter : Filter {
+    public:
     double process(double input) override {
         // Y[n] = X[n] + aY[n-1]
         feedback = input + (a * feedback);
@@ -37,9 +39,10 @@ private:
 //              |                  |
 //             (b)-->[ 1 sample ]-->
 //
-struct FIRFilter : Filter {
+class FIRFilter : Filter {
+    public:
     double process(double input) override {
-        // Y[n] = X[n] + bX[n-1]
+        // Y[n] = X[n] - bX[n-1]
         auto output = input - (b * x1);
 
         x1 = input; // Recaching Delay
@@ -62,7 +65,8 @@ private:
 //              |                   |
 //             (a)<-----------------
 //
-struct OnePole : Filter {
+class OnePole : Filter {
+    public:
     double process(double input) override {
         // Y[n] = bX[n] + aY[n-1]
         // You make this one:
@@ -75,7 +79,7 @@ struct OnePole : Filter {
     }
 
 private:
-    double feedback { 0.0 ;
+    double feedback { 0.0 };
     double a { 0.0 };
     double b { 0.0 };
 };
@@ -84,7 +88,8 @@ private:
 //                   4_Pole / Simple Cascade
 //   X[n]--->[OnePole][OnePole][OnePole][OnePole]--->Y[n]
 //
-struct SimpleLadder : Filter {
+class SimpleLadder : Filter {
+    public:
     double process(double input) override {
 
     }
@@ -111,7 +116,8 @@ private:
 //              |                   |
 //             (a)<-----------------
 //
-struct FourSample : Filter {
+class FourSample : Filter {
+    public:
     double process(double input) override {
         // Y[n] = X[n] + aY[n-4]
 
@@ -138,13 +144,14 @@ private:
 //               (a2)<----------[ 1 sample ]
 //
 //
-struct HalfBiquad : Filter {
+class HalfBiquad : Filter {
+    public:
     double process(double input) override {
       // y[n] = bX[n] - a1Y[n-1] - a2Y[n-2]
 
     }
 
-    void setBCoeffecient(double coefficient){
+    void setBCoefficient(double coefficient){
         b = coefficient;
     }
 
@@ -164,10 +171,10 @@ private:
 };
 
 
-struct Biquad : Filter {
+class Biquad : Filter {
+public:
     // Zoek een Biquad, en maak  'm :- )
     // Probeer het internet, of Will Pirkle, zijn verschillende benaderingen
     // Succes.
-
 
 };
