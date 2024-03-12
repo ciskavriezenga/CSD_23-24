@@ -6,10 +6,10 @@ LIBS = $(OPENCV)
 all: example
 
 example : bgSubtractorAverage.o bgSubtractorSD.o bgSubtractor.o BGModelCreator.o main.o
-	$(CC) -o $@ bgSubtractorAverage.o bgSubtractorSD.o bgSubtractor.o BGModelCreator.o main.o $(LDFLAGS)
+	$(CC) -o $@ $(CFLAGS) bgSubtractorAverage.o bgSubtractorSD.o bgSubtractor.o BGModelCreator.o main.o $(LDFLAGS)
 
 .cpp.o:
-	$(CC) -c $< $(CXXFLAGS) $(LIBS)
+	$(CC) -c $< $(CFLAGS) $(LIBS)
 
 clean:
 	rm -f *.o

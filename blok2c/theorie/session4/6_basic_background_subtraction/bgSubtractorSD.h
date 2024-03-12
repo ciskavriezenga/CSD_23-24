@@ -1,13 +1,13 @@
 #ifndef _BACKGROUND_SUBTRACTOR_VARIANCE_H_
 #define _BACKGROUND_SUBTRACTOR_VARIANCE_H_
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/opencv.hpp"
+#include <opencv2/core.hpp>
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 // include custom clasess
 #include "bgSubtractor.h"
-using namespace cv;
+
 
 /*
  * BGSubtractorSD is a subclass of the BGSubstractor class

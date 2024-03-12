@@ -72,7 +72,7 @@ int main( int argc, char **argv ){
       buffer[j + yOffset] = (r << 16) + (g << 8) + b;
     }
   }
-  #elif 0
+  #elif 1
   // loop through separate bytes (uchar)
   uchar* bufferUchar = (uchar*)buffer;
   int w4 = W * 4;

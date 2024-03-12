@@ -116,11 +116,16 @@ int main( int argc, char **argv ){
 
   // allocate gaussian filter kernel of 3 x 3
 
+
+  // TODO 2025 - create slides.
+  //  The kernel is applied to a set of pixels 3 x 3
+  // the result of the multiplication of the 3x3 kernel and the neigbor pixels
+  // is written in the new matrix at the 'center spot'
   float gaussianKernel[3][3] =
   {
-    { 0.0625f, 0.125f,  0.0625f},
-    { 0.125f,  0.25f,   0.125f},
-    { 0.0625f, 0.125f,  0.0625f}
+    { 0.0625f, 0.125f + 0.0625f,  0.0625f},
+    { 0.125f + 0.0625f,  0.0f,   0.125f + 0.0625f},
+    { 0.0625f, 0.125f + 0.0625f,  0.0625f}
   };
 
   float sobelXkernel[3][3] =
@@ -138,6 +143,9 @@ int main( int argc, char **argv ){
   };
 
   applyKernel(grayImg, imgBlurred, gaussianKernel);
+  applyKernel(grayImg, imgBlurred, gaussianKernel);
+
+
   applyKernel(grayImg, lineDetectionX, sobelXkernel);
   applyKernel(grayImg, lineDetectionY, sobelYkernel);
   // map values to pixel values    [-..., + ... ] --> [0, 1]
@@ -148,13 +156,13 @@ int main( int argc, char **argv ){
   lineDetectionX = abs(lineDetectionY);
   lineDetectionY *= 0.25;
   addImages(lineDetectionX, lineDetectionY, lineDetectionXY);
-  toBinary(lineDetectionXY, lineDetectionXYBinary, 0.5);
+  toBinary(lineDetectionXY, lineDetectionXYBinary, 0.85);
   // ==========  show result ==========
   // namedWindow - usually used when creating a window with options
   // imshow is sufficient to just show an image
   namedWindow( "image", WINDOW_AUTOSIZE );
   namedWindow( "Gray image", WINDOW_AUTOSIZE );
-  imshow( "image", image );
+  // imshow( "image", image );
   imshow( "Gray image", grayImg );
   imshow( "Blurred gray image", imgBlurred );
 

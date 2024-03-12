@@ -1,11 +1,10 @@
 #ifndef _BACKGROUND_SUBTRACTOR_H_
 #define _BACKGROUND_SUBTRACTOR_H_
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/opencv.hpp"
-#include "opencv2/imgproc.hpp"
+#include <opencv2/core.hpp>
+#include <opencv2/opencv.hpp>
+#include <opencv2/imgproc.hpp>
 #include <iostream>
-
 
 using namespace cv;
 
@@ -26,7 +25,7 @@ public:
    * - calls the reduceNoise method.
    * results are set to dst parameter.
    */
-  void process(Mat& src, Mat& dst);
+  void process(cv::Mat& src, cv::Mat& dst);
 
 protected:
   // ===== protected methods =====
@@ -35,14 +34,14 @@ protected:
    * binary image.
    * pure virtual function: needs to be implemented by the subclass
    */
-  virtual void substractBG(std::vector<Mat>& frameChannels, Mat& dst) = 0;
+  virtual void substractBG(std::vector<cv::Mat>& frameChannels, cv::Mat& dst) = 0;
 
   /*
    * reduceNoise: called by the process method after subtracting the background
    * to reduce the noise in the binary foreground/background image.
    * virtual function: can be overridden by the subclass
    */
-  virtual void reduceNoise(Mat& src, Mat& dst);
+  virtual void reduceNoise(cv::Mat& src, cv::Mat& dst);
 
 };
 

@@ -1,11 +1,7 @@
 <h1>Image Processing & Computer Vision</h1>
-<br/>
-<i>NOTES 2020: <br/>
-- Niet toegekomen aan alle opdrachten. <br/>
-- Voorbeelden 1 t/m 5 rustig doorgenomen, voor de rest is er niet meer echt tijd.
-</i>
-<br/>
-<br/>
+
+<h1> REMINDER: </h1>
+<a href="https://mixxx.org/news/2024-02-29-mixxx-accepted-for-gsoc-2024/">Mixxx and gsoc</a>
 
 <h2>Session Overview</h2>
 <b>

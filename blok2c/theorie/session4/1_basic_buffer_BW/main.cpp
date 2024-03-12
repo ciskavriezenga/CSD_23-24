@@ -46,7 +46,7 @@ int main( int argc, char **argv ){
 
   logValues(buffer, 0, 0, W, H);
 
-  #if 1
+  #if 0
   buffer[0] = (uchar)255;
 
   #else
@@ -79,6 +79,7 @@ int main( int argc, char **argv ){
   // scale image
   float scaleFactor = 100.0f;
   cv::resize(img, img, Size(), scaleFactor, scaleFactor, INTER_NEAREST);
+
   // create window and image matrix
   char window[] = "Drawing 2D";
   namedWindow( window, WINDOW_AUTOSIZE );
