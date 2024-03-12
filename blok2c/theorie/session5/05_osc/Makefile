@@ -29,5 +29,5 @@ osc_server: osc_server.o osc.o
 
 clean:
 	rm -f *.o
-	rm -f `find . -perm +111 -type f`
+	rm -f osc_client osc_server
 
