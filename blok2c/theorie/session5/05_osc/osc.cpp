@@ -43,8 +43,12 @@ OSC::OSC()
  * For every message path the same callback is added, which means we need
  *  to separate the messages inside the callback
  */
+
+
+
+
 int OSC::_wrap_callback(const char *path,const char *types,
-          lo_arg **argv,int argc,void *data,void *user_data)
+          lo_arg **argv,int argc,lo_message data,void *user_data)
 {
   return ((((OSC *) user_data)->realcallback(path,types,argv,argc)));
 }
@@ -76,10 +80,11 @@ void OSC::init(string serverport)
  */
 void OSC::set_callback(const char *path,const char *types)
 {
-  lo_server_thread_add_method(server,path,types,_wrap_callback,this);
+  lo_server_thread_add_method(server,path,types, _wrap_callback,this);
 }
 
-
+//int (const char *, const char *, lo_arg **, int, void *, void *)'
+//int (*)(const char *, const char *, lo_arg **, int, lo_message_ *, void *)')
 
 void OSC::start()
 {
