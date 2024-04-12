@@ -32,8 +32,8 @@ Werk je bijv. toe naar een werkend prototype, naar een mock met delen wel uitgew
 naar een onderzoeksverslag van materiaalonderzoek met kleine experimenten en uitkomsten? etc.  
 
 
-- Stel criteria op voor jezelf om je eigen voortgang in sessie 4 te beoordelen en 
-om je werk aan het einde op waarde te kunnen schatten. 
+- Stel criteria op voor jezelf om je eigen voortgang en 
+om je werk aan het einde van het blok op waarde te kunnen schatten. 
 Bijvoorbeeld in de vorm van een korte checklist waarmee je kunt verifiëren of je je
 hoofddoel en leerdoelen hebt behaald én in hoeverre je uiteindelijke eindoplevering je 
 beoogde eindoplevering omvat. 
